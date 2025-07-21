@@ -1,11 +1,10 @@
 site_name: Using Histograms
 nav:
-  - Home: index.md
-  - Introduction: 01_introduction.md
-  - Setup: 02_setup.md
-  - Histogram Basics: 03_understanding_histograms.md
-  - Plotting Examples: 04_plotting_data.md
-  - Conclusion: 05_conclusion.md
+  - Introduction: index.md
+  - Setup: 01_setup.md
+  - Histogram Basics: 02_understanding_histograms.md
+  - Plotting Examples: 03_plotting_data.md
+  - Conclusion: 04_conclusion.md
 
 theme: 
   name: material

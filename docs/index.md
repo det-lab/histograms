@@ -1,14 +1,16 @@
-# Using Histograms
-**Created by Adrian Fisher**
-## Project layout
+# Introduction
+Histograms are a powerful and intuitive way to visualize data, helping to quickly determine the answer to many statistical questions. In Python, it's possible to quickly create histograms using libraries like `matplotlib` or `pandas`. These tools allow for you to not only plot the raw data but to adjust bin sizes, add labels, and layer in additional information to make your data clearer. In this lesson, you'll learn how to:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        01_introduction.md # Introduction
-        02_setup.md # Creating the project space
-        03_understanding_histograms.md # Explaining histograms
-        04_plotting_data.md # Giving examples
-        05_conclusion.md # Conclusion
-    raw-data/
-        radioactive-sources.zip
+* Create simple histograms using `matplotlib` and `pandas`
+
+* Understand bins and learn to customize their number and sizes
+
+* Compare multiple datasets on the same histogram
+
+* Interpret the shapes of histograms to learn about your data.
+
+For this lesson, we'll be using real data taken in the University of Colorado Denver's physics program from a Gamma Spectroscopy lab. The data was collected from exposing a scintillator and photomultiplier tube to multiple different known radioactive sources with the goal of determining the composition of a final unidentified source. 
+
+---
+
+Let's get started by installing the newest versions of Python, matplotlib, and pandas. [Click here to continue to the next section](01_setup.md) to setup our machine and download the necessary files for this lesson.

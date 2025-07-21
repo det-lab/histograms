@@ -9,8 +9,8 @@ After setting up your IDE and project folder, [click here to download the exampl
 
 Next, create a new Python file by clicking the `New file` icon or typing `CTRL+N`. For this project, it's recommended to create a Jupyter Notebook which uses the `.ipynb` extension instead of a plain `.py` file as a Jupyter Notebook can more immediately display plots. 
 
-Finally, before the IDE will allow you to run any code, it'll require you to to save the new file and choose a Kernal. Create the first code cell and add a simple command (such as `print("hello world")`) to get it to prompt you to choose a Kernal source.
+Finally, before the IDE will allow you to run any code, it'll require you to to save the new file and choose a Kernel. Create the first code cell and add a simple command (such as `print("hello world")`) to get it to prompt you to choose a Kernel source.
 
 ---
 
-Now, let's get started plotting our data! [Click here to continue on to the next section](03_understanding_histograms.md) where we'll learn the basics of making and using histograms.
+Now, let's get started plotting our data! [Click here to continue on to the next section](02_understanding_histograms.md) where we'll learn the basics of making and using histograms.

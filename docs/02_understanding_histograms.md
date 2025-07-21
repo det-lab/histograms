@@ -63,4 +63,4 @@ Histograms are best when your data is continuous or pseudo-continuous, and when 
 
 ---
 
-Now that we have a basic understanding of how to use histograms, let's try creating one and comparing it using our spectroscopy data and comparing it directly to a bar graph. 
+Now that we have a basic understanding of how to use histograms, [click here to continue to the next section](03_plotting_data.md) where we can try creating one and comparing it to a bar graph using our spectroscopy data.

@@ -86,4 +86,4 @@ The dip between the ~900 and ~1300 channels likely corresponds to the histogram'
 
 ---
 
-Now that we've explored how to visualize and interpret gamma spectroscopy data using two different types of plots, we've seen how these different methods of data visualization can provide us with different information from the same dataset. [Click here to continue to the conclusion.](05_conclusion.md)
+Now that we've explored how to visualize and interpret gamma spectroscopy data using two different types of plots, we've seen how these different methods of data visualization can provide us with different information from the same dataset. [Click here to continue to the conclusion.](04_conclusion.md)

@@ -11,7 +11,7 @@ Histograms are best for answering questions like:
 
 While other plot types (like scatter plots, line graphs, or bar charts) are more suited for answering questions like:
 
-* How do individual data points relate to an independant variable (time, position, channel)?
+* How do individual data points relate to an independent variable (time, position, channel)?
 
 * Where do significant changes or features occur in the data?
 
