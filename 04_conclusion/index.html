@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../01_introduction/">
+        <link rel="prev" href="../03_plotting_data/">
       
-      
-        <link rel="next" href="../03_understanding_histograms/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Setup - Using Histograms</title>
+        <title>Conclusion - Using Histograms</title>
       
     
     
@@ -62,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setup" class="md-skip">
+        <a href="#conclusion" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Setup
+              Conclusion
             
           </span>
         </div>
@@ -199,7 +197,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Introduction
     
   </span>
   
@@ -216,12 +214,56 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_introduction/" class="md-nav__link">
+      <a href="../01_setup/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Introduction
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_understanding_histograms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Histogram Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_plotting_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plotting Examples
     
   </span>
   
@@ -247,74 +289,20 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Conclusion
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Setup
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_understanding_histograms/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Histogram Basics
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04_plotting_data/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Plotting Examples
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05_conclusion/" class="md-nav__link">
         
   
   
@@ -325,6 +313,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -349,6 +366,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -363,15 +397,31 @@
 
 
 
-<h1 id="setup">Setup</h1>
-<p>If you don't already have Python installed, you can do so by following <a href="https://www.python.org/downloads/">this link to the official site</a> to begin your download of the newest version. </p>
-<p>After doing this, it's recommended to use Python with an Integrated Development Environment (IDE). You can use any IDE (e.g., <a href="https://www.spyder-ide.org/download">Spyder</a>, <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a href="https://www.anaconda.com/">Anaconda</a>, etc.), but for this lesson <a href="https://code.visualstudio.com/">Visual Studio Code</a> is recommended.</p>
-<p>After installing your chosen IDE, you'll want to create a project folder to store your files and code. You can either create the folder from your file explorer, or create it when prompted upon opening the application.</p>
-<p>After setting up your IDE and project folder, <a href="../raw-data/Co60.csv">click here to download the example file</a>. It's recommended to keep it in a subfolder as opposed to leaving it loose in the project folder for the sake of organization.</p>
-<p>Next, create a new Python file by clicking the <code>New file</code> icon or typing <code>CTRL+N</code>. For this project, it's recommended to create a Jupyter Notebook which uses the <code>.ipynb</code> extension instead of a plain <code>.py</code> file as a Jupyter Notebook can more immediately display plots. </p>
-<p>Finally, before the IDE will allow you to run any code, it'll require you to to save the new file and choose a Kernal. Create the first code cell and add a simple command (such as <code>print("hello world")</code>) to get it to prompt you to choose a Kernal source.</p>
-<hr />
-<p>Now, let's get started plotting our data! <a href="../03_understanding_histograms/">Click here to continue on to the next section</a> where we'll learn the basics of making and using histograms.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this lesson, we've explored how to use Python to load and visualize data from a <code>.csv</code> file using two different types of plots: <strong>histograms</strong> and <strong>scatter plots</strong>. By writing flexible, reusable functions, we were able to automate our analysis and create visualizations that highlight different aspects of our data.</p>
+<p>Histograms are best for answering questions like:</p>
+<ul>
+<li>
+<p>Which values occur the most frequently? </p>
+</li>
+<li>
+<p>What is the overall shape of the data distribution?</p>
+</li>
+<li>
+<p>Are there any outliers or skew in the data?</p>
+</li>
+</ul>
+<p>While other plot types (like scatter plots, line graphs, or bar charts) are more suited for answering questions like:</p>
+<ul>
+<li>
+<p>How do individual data points relate to an independent variable (time, position, channel)?</p>
+</li>
+<li>
+<p>Where do significant changes or features occur in the data?</p>
+</li>
+</ul>
+<h2 id="further-reading">Further Reading</h2>
+<p>If you're interested in seeing another example of how to use histogram plots to visualize data, you can <a href="https://hsf-training.github.io/hsf-training-matplotlib/05-mplhep/index.html">follow this link to an HSF lesson</a> detailing how the Higgs discovery was made.</p>
 
 
 

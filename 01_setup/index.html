@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../03_understanding_histograms/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../05_conclusion/">
+        <link rel="next" href="../02_understanding_histograms/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Plotting Examples - Using Histograms</title>
+        <title>Setup - Using Histograms</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#importing-modules" class="md-skip">
+        <a href="#setup" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Plotting Examples
+              Setup
             
           </span>
         </div>
@@ -199,73 +199,7 @@
   
   
   <span class="md-ellipsis">
-    Home
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../01_introduction/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     Introduction
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Setup
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_understanding_histograms/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Histogram Basics
     
   </span>
   
@@ -296,7 +230,7 @@
   
   
   <span class="md-ellipsis">
-    Plotting Examples
+    Setup
     
   </span>
   
@@ -314,7 +248,51 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_conclusion/" class="md-nav__link">
+      <a href="../02_understanding_histograms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Histogram Basics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_plotting_data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plotting Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04_conclusion/" class="md-nav__link">
         
   
   
@@ -363,75 +341,15 @@
 
 
 
-<h1 id="importing-modules">Importing modules</h1>
-<p>In order to access data stored in a <code>.csv</code> file, you can use Python's <code>pandas</code> library to read the file before using <code>matplotlib</code> to create the histogram. This is a common workflow in data analysis for exploring the distribution of data. Let's get started by ensuring that you have these libraries installed.</p>
-<p>In a Jupyter Notebook, it's possible to run terminal commands by prefacing a command with <code>!</code>, but you can also open a terminal at the bottom of the code workspace in VSCode by clicking the three dots at the right of the toolbar and selecting <code>Terminal &gt; New Terminal</code>. Then, run the commands:</p>
-<pre><code class="language-bash">pip install pandas
-pip install matplotlib
-</code></pre>
-<p>After completing these installs, you'll have to make sure that the modules are imported at the start of your code. In your first cell, include the lines:</p>
-<pre><code class="language-bash">import matplotlib.pyplot as plt
-import pandas as pd
-</code></pre>
-<h1 id="making-the-histogram">Making the Histogram</h1>
-<p>Let's begin working to load in our data. One way to simplify this process is to create a <strong>method</strong> which can be used to load and plot any <code>.csv</code> files which follow the same format instead of repeating the steps for plotting the data for each file. Let's name our method <code>histogram_plot</code>.</p>
-<p>The only argument <code>histogram_plot</code> will need to take will be the path to the <code>.csv</code> file. It can then be made to return a graph of the data. </p>
-<p>Let's also take a look at the file before we get started creating our method. Here's the first several lines of the file <code>Co60.csv</code> up until the actual data begins:</p>
-<p><img alt="initial-data" src="../images/extra-data.png" /></p>
-<p>Of note here is that the actual graphable data taken by the software doesn't begin until row 23, with rows 1 to 21 showing the software settings that were used to take the data. Row 22 gives us the column names, <strong>Channel</strong>, <strong>Energy</strong>, and <strong>Counts</strong>. The Energy column is notably empty - data was only saved in the Channel and Counts columns. This means that when we begin plotting our data, we'll need to skip the first 21 rows and then also only use column 2. In <code>pandas</code>, this can be done with the <code>skiprows</code> and <code>usecols</code> keywords before assigning the data to a variable. </p>
-<p><code>usecols</code> will also reformat the assigned variable so column <code>2</code> will become <code>0</code>. We can then use <code>plt.hist</code> to create a histogram with a chosen number of bins:</p>
-<pre><code class="language-python">def histogram_plot(filepath):
-    # Load the data
-    data = pd.read_csv(filepath, skiprows=21, usecols=[2])
-    counts_data = data.iloc[:,0]
-    col_name = data.columns[0]
-
-    # Plot a histgram
-    plt.hist(counts_data, bins=32, edgecolor='black')
-    plt.xlabel(col_name)
-    plt.ylabel(&quot;Frequency&quot;)
-    plt.title(&quot;Distribution of &quot; + col_name)
-    plt.savefig(&quot;cobalt_hist.png&quot;)
-    plt.show()
-</code></pre>
-<p>After defining <code>histogram_plot</code>, we can then call our method by passing any of our file paths as an argument:</p>
-<pre><code class="language-python">histogram_plot(&quot;radioactive-sources/Co60.csv&quot;)
-</code></pre>
-<p>Running this will then create the following plot:</p>
-<p><img alt="cobalt histogram" src="../images/cobalt_hist.png" /></p>
-<h2 id="interpretation">Interpretation</h2>
-<p>This plot has a large peak in the 75-100 count range. This means that many channels recorded ~75-100 gamma events, likely indicating this as a typical background or baseline rate.</p>
-<p>This plot is also slightly skewed right. This means that fewer channels recorded higher counts than the mode of <span class="arithmatex">\(\approx\)</span> 75. This is to be expected with gamma spectroscopy as the isotope should be releasing fewer higher energy emissions. </p>
-<p>We can also observe multiple much smaller peaks (around the 0, 25, 200, and 250 counts), although without adjusting the bin count further it might be difficult to determine if these are signals or noise.</p>
-<h1 id="comparing-to-a-scatter-plot">Comparing to a Scatter Plot</h1>
-<p>Now, let's compare this with a scatter plot version of the same data. Let's first define our method:</p>
-<pre><code class="language-python">def scatter_plot(filepath):
-    # Load the data
-    data = pd.read_csv(filepath, skiprows=21, usecols=[0,2])
-    x_axis = data.iloc[:,0]
-    x_name = data.columns[0]
-
-    y_axis = data.iloc[:,1]
-    y_name = data.columns[1]
-
-    # Create scatter plot
-    plt.scatter(x_axis, y_axis, s=1)
-    plt.xlabel(x_name)
-    plt.ylabel(y_name)
-    plt.title(&quot;Scatter Plot&quot;)
-    plt.savefig(&quot;cobalt_scatter.png&quot;)
-    plt.show()
-</code></pre>
-<p>We can then pass the same filepath as an argument:</p>
-<pre><code class="language-python">scatter_plot(&quot;radioactive-sources/Co60.csv&quot;)
-</code></pre>
-<p>Which should result in a graph like this one:</p>
-<p><img alt="cobalt bar graph" src="../images/cobalt_scatter.png" /></p>
-<h2 id="interpretation_1">Interpretation</h2>
-<p>The scatter plot visualizes how count data varies with channel number, showing the full shape of the emitted spectrum. Clear peaks, dips, and trends across 2048 channels. This allows for you to distinguish between narrow, sharp peaks (the characteristic gamma lines) and the broader humps (Compton scattering and background noise).</p>
-<p>The dip between the ~900 and ~1300 channels likely corresponds to the histogram's mode as many values fall into that mid-count range, even though they're spread across many channels.</p>
+<h1 id="setup">Setup</h1>
+<p>If you don't already have Python installed, you can do so by following <a href="https://www.python.org/downloads/">this link to the official site</a> to begin your download of the newest version. </p>
+<p>After doing this, it's recommended to use Python with an Integrated Development Environment (IDE). You can use any IDE (e.g., <a href="https://www.spyder-ide.org/download">Spyder</a>, <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a href="https://www.anaconda.com/">Anaconda</a>, etc.), but for this lesson <a href="https://code.visualstudio.com/">Visual Studio Code</a> is recommended.</p>
+<p>After installing your chosen IDE, you'll want to create a project folder to store your files and code. You can either create the folder from your file explorer, or create it when prompted upon opening the application.</p>
+<p>After setting up your IDE and project folder, <a href="../raw-data/Co60.csv">click here to download the example file</a>. It's recommended to keep it in a subfolder as opposed to leaving it loose in the project folder for the sake of organization.</p>
+<p>Next, create a new Python file by clicking the <code>New file</code> icon or typing <code>CTRL+N</code>. For this project, it's recommended to create a Jupyter Notebook which uses the <code>.ipynb</code> extension instead of a plain <code>.py</code> file as a Jupyter Notebook can more immediately display plots. </p>
+<p>Finally, before the IDE will allow you to run any code, it'll require you to to save the new file and choose a Kernel. Create the first code cell and add a simple command (such as <code>print("hello world")</code>) to get it to prompt you to choose a Kernel source.</p>
 <hr />
-<p>Now that we've explored how to visualize and interpret gamma spectroscopy data using two different types of plots, we've seen how these different methods of data visualization can provide us with different information from the same dataset. <a href="../05_conclusion/">Click here to continue to the conclusion.</a></p>
+<p>Now, let's get started plotting our data! <a href="../02_understanding_histograms/">Click here to continue on to the next section</a> where we'll learn the basics of making and using histograms.</p>
 
 
 

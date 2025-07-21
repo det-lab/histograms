@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../01_setup/">
       
       
-        <link rel="next" href="../02_setup/">
+        <link rel="next" href="../03_plotting_data/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Introduction - Using Histograms</title>
+        <title>Histogram Basics - Using Histograms</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#understanding-histograms" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Histogram Basics
             
           </span>
         </div>
@@ -199,7 +199,29 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
     
   </span>
   
@@ -225,52 +247,20 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Histogram Basics
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Introduction
-    
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02_setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Setup
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03_understanding_histograms/" class="md-nav__link">
         
   
   
@@ -281,6 +271,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shape-of-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shape of the Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-not-to-use-a-histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Not to Use a Histogram
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -292,7 +329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_plotting_data/" class="md-nav__link">
+      <a href="../03_plotting_data/" class="md-nav__link">
         
   
   
@@ -314,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_conclusion/" class="md-nav__link">
+      <a href="../04_conclusion/" class="md-nav__link">
         
   
   
@@ -349,6 +386,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shape-of-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shape of the Data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-not-to-use-a-histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      When Not to Use a Histogram
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -363,25 +435,74 @@
 
 
 
-<h1 id="introduction">Introduction</h1>
-<p>Histograms are a powerful and intuitive way to visualize data, helping to quickly determine the answer to many statistical questions. In Python, it's possible to quickly create histograms using libraries like <code>matplotlib</code> or <code>pandas</code>. These tools allow for you to not only plot the raw data but to adjust bin sizes, add labels, and layer in additional information to make your data clearer. In this lesson, you'll learn how to:</p>
+<h1 id="understanding-histograms">Understanding Histograms</h1>
+<p>A <strong>histogram</strong> is a type of graph used to represent the distribution of a set of numerical data. Unlike a line or a bar graph where each value or category is plotted directly, a histogram groups data into ranges, called <strong>bins</strong>, and then counts how many data points fall into each range. This makes it especially useful for identifying patterns in large datasets such as:</p>
 <ul>
 <li>
-<p>Create simple histograms using <code>matplotlib</code> and <code>pandas</code></p>
+<p>Where are the values concentrate?</p>
 </li>
 <li>
-<p>Understand bins and learn to customize their number and sizes</p>
+<p>Are there clear peaks?</p>
 </li>
 <li>
-<p>Compare multiple datasets on the same historgram</p>
+<p>Are there gaps or outliers?</p>
 </li>
 <li>
-<p>Interpret the shapes of histograms to learn about your data.</p>
+<p>What's the range and shape of the data distribution?</p>
 </li>
 </ul>
-<p>For this lesson, we'll be using real data taken in the University of Colorado Denver's physics program from a Gamma Spectroscopy lab. The data was collected from exposing a scintillator and photomultiplier tube to multiple different known radioactive sources with the goal of determining the composition of a final unidentified source. </p>
+<p>In the case of gamma spectroscopy, each detection event is recorded at a specific <strong>channel</strong> number which corresponds to a range of <strong>photon energies</strong>. Because there are often hundreds or thousands of individual channels, plotting each one as a bar is more likely to be overwhelming and noisy for elements which aren't as strongly radioactive. A histogram helps us view the overall shape of the data.</p>
+<h2 id="bins">Bins</h2>
+<p><strong>Bins</strong> divide the range of x-values (channel numbers here) into equal-width segments. Each bin groups all the data points that fall within its range and tallies how many there are, giving the y-axis of a histogram plot. For example, as the detector used 2048 channels, if you decided to use 128 bins for the data each bin would represent 16 adjacent channels/energy levels.</p>
+<p>Choosing the right number of bins is a balance between <strong>detail</strong> and <strong>readability</strong>:</p>
+<ul>
+<li>
+<p>More bins <span class="arithmatex">\(\to\)</span> More detail, higher resolution, but potentially noisier. This may help you resolve closely spaced peaks, but it can also amplify noise or fluctuations.</p>
+</li>
+<li>
+<p>Fewer bins <span class="arithmatex">\(\to\)</span> Smoother curve, but less resolution. This can help to clarify general trends and reduce noise, but it may blur out small but relevant peaks.</p>
+</li>
+</ul>
+<p>You can experiment with different bin settings depending on what it is that you want to analyze. To locate a peak: start with more bins. To estimate the general shape: start with fewer bins.</p>
+<h2 id="shape-of-the-data">Shape of the Data</h2>
+<p>Histograms are useful for diagnosing the statistical nature of your data. A single sharp peak may indicate a well-isolated energy level. A broad peak could point to resolution limitations or overlapping emissions. A tail or skew might suggest background noise, scattering effects, or data artifacts. Understanding such shapes will help in interpreting physical results and deciding whether additional calibration or filtering might be needed. </p>
+<p>Histograms come in six possible variations:</p>
+<ul>
+<li>Symmetric</li>
+</ul>
+<p><img alt="wiki symmetric" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Symmetric-histogram.png" /></p>
+<ul>
+<li>Skewed right</li>
+</ul>
+<p><img alt="wiki skewed right" src="https://upload.wikimedia.org/wikipedia/commons/1/12/Skewed-right.png" /></p>
+<ul>
+<li>Skewed left</li>
+</ul>
+<p><img alt="wiki skewed left" src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Skewed-left.png" /></p>
+<ul>
+<li>Bimodal</li>
+</ul>
+<p><img alt="wiki bimodal" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Bimodal-histogram.png" /></p>
+<ul>
+<li>Multimodal</li>
+</ul>
+<p><img alt="wiki multimodal" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Multimodal.png" /></p>
+<p>In a histogram plot, the tallest bar represents the data's <strong>mode</strong> (usually - this can be incorrect if the bin size is poorly chosen or the data is especially noisy). </p>
+<p>In a symmetric plot the <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> should all occur near the same point. </p>
+<p>In a skewed plot, the <strong>mean</strong> and <strong>median</strong> typically shift towards the direction of the skew. </p>
+<ul>
+<li>
+<p>Right skew: mean &gt; median &gt; mode</p>
+</li>
+<li>
+<p>Left skew: mean &lt; median &lt; mode</p>
+</li>
+</ul>
+<p>For bimodal and multimodal plots, the <strong>mean</strong> and <strong>median</strong> do not necessarily fall at one of the peaks, and can even lie <strong>between the modes</strong> depending on the relative height and width of the peaks. So they can become harder to visualize from the plot alone in this case.</p>
+<h2 id="when-not-to-use-a-histogram">When Not to Use a Histogram</h2>
+<p>Histograms are best when your data is continuous or pseudo-continuous, and when you care about frequency distributions. If you're comparing a small number of distinct categories, a bar chart is likely a better choice. </p>
 <hr />
-<p>Let's get started by installing the newest versions of Python, matplotlib, and pandas. <a href="../02_setup/">Click here to continue to the next section</a> to setup our machine and download the necessary files for this lesson.</p>
+<p>Now that we have a basic understanding of how to use histograms, <a href="../03_plotting_data/">click here to continue to the next section</a> where we can try creating one and comparing it to a bar graph using our spectroscopy data.</p>
 
 
 
