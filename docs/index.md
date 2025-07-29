@@ -11,6 +11,8 @@ Histograms are a powerful and intuitive way to visualize data, helping to quickl
 
 For this lesson, we'll be using real data taken in the University of Colorado Denver's physics program from a Gamma Spectroscopy lab. The data was collected from exposing a scintillator and photomultiplier tube to multiple different known radioactive sources with the goal of determining the composition of a final unidentified source. 
 
+>If you are new to programming, it's recommended that you first take a few minutes to go over [this short lesson](https://det-lab.github.io/reading-documentation/) talking about how to read technical documentation.
+
 ---
 
 Let's get started by installing the newest versions of Python, matplotlib, and pandas. [Click here to continue to the next section](01_setup.md) to setup our machine and download the necessary files for this lesson.
