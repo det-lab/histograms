@@ -292,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_conclusion/" class="md-nav__link">
+      <a href="../04_conclusion.md" class="md-nav__link">
         
   
   
@@ -342,12 +342,17 @@
 
 
 <h1 id="setup">Setup</h1>
-<p>If you don't already have Python installed, you can do so by following <a href="https://www.python.org/downloads/">this link to the official site</a> to begin your download of the newest version. </p>
-<p>After doing this, it's recommended to use Python with an Integrated Development Environment (IDE). You can use any IDE (e.g., <a href="https://www.spyder-ide.org/download">Spyder</a>, <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a href="https://www.anaconda.com/">Anaconda</a>, etc.), but for this lesson <a href="https://code.visualstudio.com/">Visual Studio Code</a> is recommended.</p>
-<p>After installing your chosen IDE, you'll want to create a project folder to store your files and code. You can either create the folder from your file explorer, or create it when prompted upon opening the application.</p>
-<p>After setting up your IDE and project folder, <a href="../raw-data/Co60.csv">click here to download the example file</a>. It's recommended to keep it in a subfolder as opposed to leaving it loose in the project folder for the sake of organization.</p>
-<p>Next, create a new Python file by clicking the <code>New file</code> icon or typing <code>CTRL+N</code>. For this project, it's recommended to create a Jupyter Notebook which uses the <code>.ipynb</code> extension instead of a plain <code>.py</code> file as a Jupyter Notebook can more immediately display plots. </p>
-<p>Finally, before the IDE will allow you to run any code, it'll require you to to save the new file and choose a Kernel. Create the first code cell and add a simple command (such as <code>print("hello world")</code>) to get it to prompt you to choose a Kernel source.</p>
+<p>This lesson will be using Python 3 along with several of its more common libraries: <code>scipy</code>, <code>pandas</code>, <code>matplotlib</code>, and <code>numpy</code>. We will be using Anaconda for our purposes here - Anaconda installs a launcher with Jupyter Notebook as one of the options. Jupyter Notebooks will be used for their cells which make dividing up processes more convenient when working with Python.</p>
+<p>To get started downloading Anaconda, follow <a href="https://www.anaconda.com/download">this link</a>. Anaconda is free, and if you don't want to create an account with them click the "skip registration" link inside the "Free Download" box. Don't download "Miniconda", instead, download the full distribution with the Distribution installers for your OS. </p>
+<p>Next, create a folder to house your project files, named something like "histogram". After doing this, download and unzip <a href="../raw-data/energies.txt">this raw data file</a>. Then, you can move this file into your project folder. </p>
+<p>Finally, create a new notebook by clicking on <code>New</code> and <code>Notebook</code> and selecting the kernel: <code>Python 3 (ipykernel)</code>. You can then either name your project or keep it untitled.</p>
+<p>Here's a short video showing the process of opening a Jupyter Notebook and running a code cell (skipping the step of creating a new folder):</p>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=AMf50_G_Y-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<blockquote>
+<p>If you're having trouble loading this video, you may have to open it in a new tab, window, or browser. <a href="https://www.youtube.com/watch?v=AMf50_G_Y-A">Click here</a> for the link to the video.</p>
+<p>For advanced users looking for more features in your IDE: For a complete list of Python IDEs that you can explore, <a href="https://wiki.python.org/moin/IntegratedDevelopmentEnvironments">click here</a>.</p>
+</blockquote>
 <hr />
 <p>Now, let's get started plotting our data! <a href="../02_understanding_histograms/">Click here to continue on to the next section</a> where we'll learn the basics of making and using histograms.</p>
 
