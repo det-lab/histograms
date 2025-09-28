@@ -47,6 +47,8 @@ plot_histogram('energies.txt', bins=60, title='Cobalt-60')
 
 ![60 bins](images/Cobalt-60.jpg)
 
-This has been a very bare-bones introduction to creating and using histogram plots, but there is much more to them than we are going over in this short lesson.
+With these examples, you can see how flexible a single plotting function can be. By changing just a couple arguments, you can adjust the look and labeling of your histogram to better suit your data and presentation needs. At this point, you've learned the essentials of reading in a dataset, building a reusable method, and generating clear plots that can be customized and saved for later use.
+
+This has been a very bare-bones introduction to creating and using histogram plots, but there is much more to them than we are going over in this short lesson. If you're interested in learning more data analysis with this data set, we recommend you to take a look at our [data fitting lesson](https://det-lab.github.io/data-fitting/)
 
 If you're interested in seeing another example of how to use histogram plots to visualize data, you can [follow this link to an HSF lesson](https://hsf-training.github.io/hsf-training-matplotlib/05-mplhep/index.html) detailing how the Higgs discovery was made using histogram plots.

@@ -1,5 +1,7 @@
 # Setup
-This lesson will be using Python 3 along with several of its more common libraries: `scipy`, `pandas`, `matplotlib`, and `numpy`. We will be using Anaconda for our purposes here - Anaconda installs a launcher with Jupyter Notebook as one of the options. Jupyter Notebooks will be used for their cells which make dividing up processes more convenient when working with Python.
+This lesson will be using Python 3 along with two of its more common libraries: `matplotlib`, and `numpy`. We will be using Anaconda for our purposes here - Anaconda installs a launcher with Jupyter Notebook as one of the options. Jupyter Notebooks will be used for their cells which make dividing up processes more convenient when working with Python.
+
+>For advanced users looking for more features in your IDE: For a complete list of Python IDEs that you can explore, [click here](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
 
 To get started downloading Anaconda, follow [this link](https://www.anaconda.com/download). Anaconda is free, and if you don't want to create an account with them click the "skip registration" link inside the "Free Download" box. Don't download "Miniconda", instead, download the full distribution with the Distribution installers for your OS. 
 
@@ -12,8 +14,6 @@ Here's a short video showing the process of opening a Jupyter Notebook and runni
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=AMf50_G_Y-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 >If you're having trouble loading this video, you may have to open it in a new tab, window, or browser. [Click here](https://www.youtube.com/watch?v=AMf50_G_Y-A) for the link to the video.
-
->For advanced users looking for more features in your IDE: For a complete list of Python IDEs that you can explore, [click here](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
 
 ---
 
