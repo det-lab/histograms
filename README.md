@@ -5,16 +5,14 @@ This lesson is broken into the following sections:
 ## Introduction (`index.md`)
 A brief overview of what the lesson will cover.
 ## Setup (`01_setup.md`)
-Instructions for installing Python and starting an IDE.
+Instructions for installing and running a Jupyter Notebook environment.
 ## Histogram Basics (`02_understanding_histograms.md`)
-Descriptions of the uses for histograms, describing the process of binning data, and describing the different possible shapes of histogram plots and their meanings.
+Descriptions binning data and uses for histograms.
 ## Plotting Examples (`03_plotting_data.md`)
-Showing the process of plotting data in a histogram and interpreting the results before comparing it to a scatter plot.
-## Conclusion (`04_conclusion.md`)
-Finishing up the lesson and reviewing the uses for histograms before providing further reading.
+Showing the process of plotting data in a histogram and interpreting the results.
 # Requirements
 * Python 3.11+
 
-* pandas
+* numpy
 
 * matplotlib
