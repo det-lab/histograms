@@ -1,15 +1,19 @@
 # Setup
-If you don't already have Python installed, you can do so by following [this link to the official site](https://www.python.org/downloads/) to begin your download of the newest version. 
+This lesson will be using Python 3 along with several of its more common libraries: `scipy`, `pandas`, `matplotlib`, and `numpy`. We will be using Anaconda for our purposes here - Anaconda installs a launcher with Jupyter Notebook as one of the options. Jupyter Notebooks will be used for their cells which make dividing up processes more convenient when working with Python.
 
-After doing this, it's recommended to use Python with an Integrated Development Environment (IDE). You can use any IDE (e.g., [Spyder](https://www.spyder-ide.org/download), [PyCharm](https://www.jetbrains.com/pycharm/), [Anaconda](https://www.anaconda.com/), etc.), but for this lesson [Visual Studio Code](https://code.visualstudio.com/) is recommended.
+To get started downloading Anaconda, follow [this link](https://www.anaconda.com/download). Anaconda is free, and if you don't want to create an account with them click the "skip registration" link inside the "Free Download" box. Don't download "Miniconda", instead, download the full distribution with the Distribution installers for your OS. 
 
-After installing your chosen IDE, you'll want to create a project folder to store your files and code. You can either create the folder from your file explorer, or create it when prompted upon opening the application.
+Next, create a folder to house your project files, named something like "histogram". After doing this, download and unzip [this raw data file](raw-data/energies.txt). Then, you can move this file into your project folder. 
 
-After setting up your IDE and project folder, [click here to download the example file](raw-data/Co60.csv). It's recommended to keep it in a subfolder as opposed to leaving it loose in the project folder for the sake of organization.
+Finally, create a new notebook by clicking on `New` and `Notebook` and selecting the kernel: `Python 3 (ipykernel)`. You can then either name your project or keep it untitled.
 
-Next, create a new Python file by clicking the `New file` icon or typing `CTRL+N`. For this project, it's recommended to create a Jupyter Notebook which uses the `.ipynb` extension instead of a plain `.py` file as a Jupyter Notebook can more immediately display plots. 
+Here's a short video showing the process of opening a Jupyter Notebook and running a code cell (skipping the step of creating a new folder):
 
-Finally, before the IDE will allow you to run any code, it'll require you to to save the new file and choose a Kernel. Create the first code cell and add a simple command (such as `print("hello world")`) to get it to prompt you to choose a Kernel source.
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=AMf50_G_Y-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>If you're having trouble loading this video, you may have to open it in a new tab, window, or browser. [Click here](https://www.youtube.com/watch?v=AMf50_G_Y-A) for the link to the video.
+
+>For advanced users looking for more features in your IDE: For a complete list of Python IDEs that you can explore, [click here](https://wiki.python.org/moin/IntegratedDevelopmentEnvironments).
 
 ---
 

@@ -1,17 +1,33 @@
 # Understanding Histograms
-A **histogram** is a type of graph used to represent the distribution of a set of numerical data. Unlike a line or a bar graph where each value or category is plotted directly, a histogram groups data into ranges, called **bins**, and then counts how many data points fall into each range. This makes it especially useful for identifying patterns in large datasets such as:
+Before we get started, let's take a quick look at some of our data. Here we can see the first 10 values as recorded:
+```
+1.780899360489525179e+03
+3.227395719771547533e+02
+1.455079922763120805e+02
+1.356769962678787806e+03
+3.317730729724006551e+02
+3.136292283517848887e+02
+1.156268173200431875e+03
+1.714656378754030186e+02
+3.727997265676052621e+02
+1.363714678853047189e+03
+```
+Just looking at this, it can be overwhelming to try and determine what is happening. The numbers appear to be random with no pattern in their appearance.
 
-* Where are the values concentrate?
+In this gamma spectroscopy data, each value corresponds to a given **photon energy** which is then put into one of 2048 **bins**. For a more complete explanation of the experiment and data collection methods, see the experiment section of our [data fitting lesson](https://det-lab.github.io/data-fitting/02_experiment_details/).
 
-* Are there clear peaks?
+We can visualize how this data was collected by creating a gif showing how each new detection is stored as a new **count** (y-axis) in the **channels**/**bins** (x-axis).
 
-* Are there gaps or outliers?
+![increasing count](images/count.gif)
 
-* What's the range and shape of the data distribution?
+In this gif, each new frame represents another 300 detection events. Over time, this eventually creates a visible pattern related to the radioactive element that was placed in the system. This is a **histogram** of our data. The total dataset (without reducing the number of **bins**) looks like:
 
-In the case of gamma spectroscopy, each detection event is recorded at a specific **channel** number which corresponds to a range of **photon energies**. Because there are often hundreds or thousands of individual channels, plotting each one as a bar is more likely to be overwhelming and noisy for elements which aren't as strongly radioactive. A histogram helps us view the overall shape of the data.
+![full dataset](images/full-data.jpg)
+
+ A **histogram** is a type of graph used to represent the distribution of numerical data, and is especially useful in cases such as this where the data is not continuous. Unlike a line or a bar graph where each value or category is plotted directly, a histogram groups data into ranges, called **bins**, and then counts how many data points fall into each range. In the above gif, the number of bins is the number of channels, making the data appear coarse and noisy. But the power of a histogram is in our ability to manipulate the number of bins to visualize our data. 
+
 ## Bins
-**Bins** divide the range of x-values (channel numbers here) into equal-width segments. Each bin groups all the data points that fall within its range and tallies how many there are, giving the y-axis of a histogram plot. For example, as the detector used 2048 channels, if you decided to use 128 bins for the data each bin would represent 16 adjacent channels/energy levels.
+**Bins** divide the range of x-values (channel numbers) into equal-width segments. Each bin groups all the data points that fall within its range and tallies how many there are, giving us a y-axis with units of counts. 
 
 Choosing the right number of bins is a balance between **detail** and **readability**:
 
@@ -19,48 +35,20 @@ Choosing the right number of bins is a balance between **detail** and **readabil
 
 * Fewer bins $\to$ Smoother curve, but less resolution. This can help to clarify general trends and reduce noise, but it may blur out small but relevant peaks.
 
-You can experiment with different bin settings depending on what it is that you want to analyze. To locate a peak: start with more bins. To estimate the general shape: start with fewer bins.
-## Shape of the Data
-Histograms are useful for diagnosing the statistical nature of your data. A single sharp peak may indicate a well-isolated energy level. A broad peak could point to resolution limitations or overlapping emissions. A tail or skew might suggest background noise, scattering effects, or data artifacts. Understanding such shapes will help in interpreting physical results and deciding whether additional calibration or filtering might be needed. 
+![histogram gif](images/histogram.gif)
 
-Histograms come in six possible variations:
+You will have to experiment with different bin settings depending on what it is that you want to analyze. Choosing the mathematically optimized number of bins can be incredibly complicated, but practically speaking it is normally effective to trust your eyes. It should look somewhat smooth but still contain notable features. 
 
-* Symmetric
+Creating a histogram of our data allows us to identify patterns in large datasets such as:
 
-![wiki symmetric](https://upload.wikimedia.org/wikipedia/commons/1/15/Symmetric-histogram.png)
+* Where do the values concentrate?
 
+* Are there clear peaks?
 
-* Skewed right
+* Are there gaps or outliers?
 
-![wiki skewed right](https://upload.wikimedia.org/wikipedia/commons/1/12/Skewed-right.png)
-
-* Skewed left
-
-![wiki skewed left](https://upload.wikimedia.org/wikipedia/commons/7/7b/Skewed-left.png)
-
-* Bimodal
-
-![wiki bimodal](https://upload.wikimedia.org/wikipedia/commons/7/7a/Bimodal-histogram.png)
-
-* Multimodal
-
-![wiki multimodal](https://upload.wikimedia.org/wikipedia/commons/3/39/Multimodal.png)
-
-In a histogram plot, the tallest bar represents the data's **mode** (usually - this can be incorrect if the bin size is poorly chosen or the data is especially noisy). 
-
-In a symmetric plot the **mean**, **median**, and **mode** should all occur near the same point. 
-
-In a skewed plot, the **mean** and **median** typically shift towards the direction of the skew. 
-
-* Right skew: mean > median > mode
-
-* Left skew: mean < median < mode
-
-For bimodal and multimodal plots, the **mean** and **median** do not necessarily fall at one of the peaks, and can even lie **between the modes** depending on the relative height and width of the peaks. So they can become harder to visualize from the plot alone in this case.
-
-## When Not to Use a Histogram
-Histograms are best when your data is continuous or pseudo-continuous, and when you care about frequency distributions. If you're comparing a small number of distinct categories, a bar chart is likely a better choice. 
+* What's the range and shape of the data distribution? 
 
 ---
 
-Now that we have a basic understanding of how to use histograms, [click here to continue to the next section](03_plotting_data.md) where we can try creating one and comparing it to a bar graph using our spectroscopy data.
+Now that we have a basic understanding of the features of histograms, [click here to continue to the next section](03_plotting_data.md) where we can learn the commands to create them.
